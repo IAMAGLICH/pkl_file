@@ -1,0 +1,145 @@
+GRPA 1:
+
+
+
+def get_freq(filename):
+
+    d={}
+
+    f=open(filename,"r")
+
+    x= f.readline()
+
+    while(x):
+
+        x= x.strip('\n')
+
+        if(x in d):
+
+            d[x]+=1
+
+        else:
+
+            d[x]=1
+
+        x = f.readline()
+
+    f.close()
+
+    return d
+
+==============================================================================================================================
+
+#GRPA 2:
+
+
+def relation(file1, file2):
+
+    x1 = open(file1,"r")
+
+    x2 = open(file2,"r")
+
+    f1 = x1.readline()
+
+    f2 = x2.readline()
+
+    while(f1):
+
+        if(f2=='\n'):
+
+            return ("No Relation")
+
+        elif(f1.strip('\n')!=f2.strip('\n')):
+
+            return("No Relation")
+
+        f1=x1.readline()
+
+        f2=x2.readline()
+
+    if(f2==''):
+
+        return ("Equal")
+
+    else:
+
+        return("Subset")
+        
+===========================================================================================================================
+
+# GRPA 3:
+
+
+def get_goals(filename,country):
+
+    f = open(filename,"r")
+
+    nop=0
+
+    sog=0
+
+    L= f.readlines()[1:]
+
+    for i in L:
+
+        j=i.split(",")
+
+        if(j[1]==country):
+
+            nop+=1
+
+            sog=sog+int(j[2])
+
+    if(nop==0):
+
+        return(-1,-1)
+
+    return(nop,sog)
+
+============================================================================================================================
+
+#GRPA 4:       
+ 
+def num_to_words(mat):
+
+    f= open("words.csv","w")
+
+    d={1:'one',2:'two',3:'three',4:'four',5:'five',6:'six',7:'seven',8:'eight',9:'nine',0:'zero'}
+
+    for i in range(len(mat)-1):
+
+        for j in range(len(mat)):
+
+            f.write(d[mat[i][j]])
+
+            if(j<len(mat)-1):
+
+                f.write(",")
+
+        f.write("\n")
+
+    for j in range(len(mat)):
+
+        f.write(d[mat[len(mat)-1][j]])
+
+        if(j<len(mat)-1):
+
+            f.write(",")
+
+=============================================== 
+        
+        padh le bhai
+        
+        kab tk aise answers chhapega !!
+        
+        
+        
+        
+
+ 
+  
+  
+
+        return("Subset")
+
+====================================
